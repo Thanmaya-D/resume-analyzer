@@ -1,25 +1,5 @@
 # AI Resume Analyzer
 
-An AI-powered web application that analyzes resumes and provides skill insights, resume score, and improvement suggestions.
-
-## Features
-
-- Upload resume (PDF)
-- Extract text from resume
-- Detect technical skills
-- Calculate resume score
-- Show missing skills
-- Provide AI suggestions
-
-## Technologies Used
-
-- Python
-- Flask
-- HTML
-- CSS
-- Bootstrap
-- NLP (basic skill extraction)
-
 ## Project Structure
 
 resume-analyzer/
@@ -37,6 +17,17 @@ resume-analyzer/
 └── uploads/
     └── resume.pdf
 
+
 ## How to Run
 
 1. Install requirements
+pip install flask pdfminer.six
+
+2. Run the application
+python app.py
+
+3. Open in browser
+http://127.0.0.1:5000
+
+## Author
+Thanmaya D
