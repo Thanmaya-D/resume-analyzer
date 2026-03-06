@@ -1,34 +1,41 @@
-# Project Name
+# AI Resume Analyzer
 
-Short description of the project.
+A web application that analyzes resumes and detects technical skills.
 
 ## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- Upload resume (PDF)
+- Detect technical skills
+- Calculate resume score
+- Suggest missing skills
 
 ## Technologies Used
+- Python
+- Flask
 - HTML
 - CSS
-- JavaScript
-- Python (if used)
+- Bootstrap
 
-## Project Structure
+## Project Link
 
-project-name/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
+[View Project on GitHub](https://github.com/Thanmaya-D/resume-analyzer)
 
 ## How to Run
 
 1. Clone the repository
-2. Open the project folder
-3. Run the project in browser
-4. http://127.0.0.1:5000
+
+git clone https://github.com/Thanmaya-D/resume-analyzer.git
+
+2. Install dependencies
+
+pip install flask pdfminer.six
+
+3. Run application
+
+python app.py
+
+4. Open in browser
+
+http://127.0.0.1:5000
 
 ## Author
 Thanmaya D
