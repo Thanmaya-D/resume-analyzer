@@ -36,4 +36,4 @@ resume-analyzer/
 └── README.md
 
 ## Author
-Thanmaya
+Thanmaya D
