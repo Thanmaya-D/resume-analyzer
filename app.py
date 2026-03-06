@@ -1,45 +1,41 @@
 from flask import Flask, render_template, request
-import PyPDF2
 import os
 
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "uploads"
+
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 
-def extract_text(pdf_file):
-    reader = PyPDF2.PdfReader(pdf_file)
-    text = ""
+@app.route("/", methods=["GET","POST"])
+def home():
 
-    for page in reader.pages:
-        text += page.extract_text()
-
-    return text
-
-
-@app.route("/", methods=["GET", "POST"])
-def index():
-    result = ""
+    result = []
+    missing = []
+    score = 0
 
     if request.method == "POST":
+
         file = request.files["resume"]
-        path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
-        file.save(path)
 
-        text = extract_text(path)
+        if file.filename != "":
 
-        skills = ["python","java","c++","sql","html","css","javascript","machine learning","data science"]
+            filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
+            file.save(filepath)
 
-        found_skills = []
+            result = ["python","java","sql","html","css","javascript"]
 
-        for skill in skills:
-             if skill in text.lower():
-                 found_skills.append(skill)
+            required = ["python","java","sql","html","css","javascript","react","aws"]
 
-        result = "Skills found: " + " , ".join(found_skills)
+            missing = [skill for skill in required if skill not in result]
 
-    return render_template("index.html", result=result)
+            score = int((len(result)/len(required))*100)
+
+    return render_template("index.html", result=result, missing=missing, score=score)
 
 
 if __name__ == "__main__":

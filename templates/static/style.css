@@ -1,0 +1,41 @@
+body{
+background:linear-gradient(135deg,#667eea,#764ba2);
+min-height:100vh;
+font-family:Arial;
+padding:40px;
+}
+
+.card{
+padding:40px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+background:white;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.drop-area{
+border:2px dashed #667eea;
+padding:30px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.skill{
+background:#667eea;
+color:white;
+padding:6px 12px;
+margin:5px;
+border-radius:20px;
+display:inline-block;
+font-size:14px;
+}
+
+.section{
+margin-top:25px;
+}
+
+button{
+    height: 45px;
+    font-size: 16px;
+}
