@@ -28,6 +28,7 @@ project-name/
 1. Clone the repository
 2. Open the project folder
 3. Run the project in browser
+4. http://127.0.0.1:5000
 
 ## Author
 Thanmaya D
