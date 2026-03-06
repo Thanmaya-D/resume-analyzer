@@ -1,33 +1,33 @@
-# AI Resume Analyzer
+# Project Name
+
+Short description of the project.
+
+## Features
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Python (if used)
 
 ## Project Structure
 
-resume-analyzer/
+project-name/
 │
-├── app.py
-├── ai_engine.py
-├── requirements.txt
-│
-├── templates/
-│ └── index.html
-│
-├── static/
-│ └── style.css
-│
-└── uploads/
-    └── resume.pdf
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 
 
 ## How to Run
 
-1. Install requirements
-pip install flask pdfminer.six
-
-2. Run the application
-python app.py
-
-3. Open in browser
-http://127.0.0.1:5000
+1. Clone the repository
+2. Open the project folder
+3. Run the project in browser
 
 ## Author
 Thanmaya D
